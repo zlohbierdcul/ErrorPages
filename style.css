@@ -4,7 +4,7 @@
     --primary: #b9c7b3;
     --secondary: #445c4c;
     --accent: #84a499;
-    --window: #6b7a756c;
+    --window: #313a37ab;
     --window-top: #212525;
     --window-tool: #212525bd;
 }
@@ -17,7 +17,10 @@ html {
 }
 
 body {
-    background-color: var(--background);
+    background-image: url(./bg.png);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center; 
     color: var(--text);
 }
 
