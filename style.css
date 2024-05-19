@@ -1,0 +1,148 @@
+:root {
+    --background: #050604;
+    --text: #ecf0ea;
+    --primary: #b9c7b3;
+    --secondary: #445c4c;
+    --accent: #84a499;
+    --window: #6b7a756c;
+    --window-top: #212525;
+    --window-tool: #212525bd;
+}
+
+body,
+html {
+    font-family: "Victor Mono", monospace;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.window {
+    aspect-ratio: 5/3;
+    height: 50%;
+    max-width: 90%;
+    background-color: var(--window);
+    border-radius: 0.5rem;
+    border: 1px solid var(--secondary);
+    -webkit-box-shadow: 8px 3px 32px 7px rgba(131, 131, 131, 0.2);
+    box-shadow: 8px 3px 32px 7px rgba(131, 131, 131, 0.2);
+    overflow: hidden;
+}
+@media only screen and (max-width: 640px){
+	.window {
+        max-width: 100%;
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+    }
+}
+
+.topbar {
+    width: 100%;
+    height: 2rem;
+    background-color: var(--window-top);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.topbar span {
+    margin: auto;
+    font-size: .85rem;
+}
+
+.btn-container {
+    justify-self: end;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-right: .5rem;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1rem;
+    width: 1rem;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.close {
+    background-color: var(--secondary);
+    border-radius: 50%;
+}
+
+.toolbar {
+    height: 1.5rem;
+    background-color: var(--window-tool);
+    display: flex;
+    gap: .5rem;
+    padding-left: .5rem;
+    font-size: .85rem;
+    align-items: center;
+}
+
+.toolbar span {
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.toolbar span:hover {
+    background-color: var(--secondary);
+}
+
+.content {
+    margin: .2rem;
+    overflow: auto;
+    height: calc(100% - 4rem);
+}
+
+.user {
+    color: #44bd6a;
+    font-weight: 800;
+}
+
+.path {
+    color: #44abbd;
+}
+
+.status-code {
+    white-space: pre;
+}
+
+a {
+    text-decoration: none;
+    color: #89bd44;
+}
+
+.blink {
+    animation: blink 1s step-start infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
